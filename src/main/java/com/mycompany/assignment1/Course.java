@@ -13,8 +13,8 @@ public class Course {
     private final String name;
     private final DateTime startDate;
     private final DateTime endDate;
-    private List<Module> modules = new ArrayList<>();
-    private List<Student> students = new ArrayList<>();
+    private final List<Module> modules = new ArrayList<>();
+    private final List<Student> students = new ArrayList<>();
 
     public Course(String name, DateTime startDate, DateTime endDate) {
         this.name = name;
@@ -32,11 +32,7 @@ public class Course {
     public DateTime getEndDate() {
         return endDate;
     }
-    
-    public void setModules(List<Module> modules) {
-        this.modules = modules;
-    }
-    
+
     public List<Module> getModules() {
         return modules;
     }
@@ -67,6 +63,6 @@ public class Course {
 
     @Override
     public String toString() {
-        return "Course{" + "name=" + name + ", endDate=" + endDate + '}';
+        return "Course{" + "name=" + name + '}';
     }
 }
