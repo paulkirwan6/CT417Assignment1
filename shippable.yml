@@ -1,0 +1,9 @@
+name: CT417Assignment1RunCI
+type: runCI
+language: java
+jdk: oraclejdk11
+
+build:
+  ci:
+    - mvn install
+    - mvn test
