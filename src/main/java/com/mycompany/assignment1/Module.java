@@ -11,8 +11,8 @@ public class Module {
     
     private final String name;
     private final String Id;
-    private List<Student> students = new ArrayList<>();
-    private List<Course> courses = new ArrayList<>();
+    private final List<Student> students = new ArrayList<>();
+    private final List<Course> courses = new ArrayList<>();
 
     public Module(String name, String Id) {
         this.name = name;
@@ -27,28 +27,30 @@ public class Module {
         return Id;
     }
 
-    public void setStudents(List<Student> students) {
-        this.students = students;
-    }
-
     public List<Student> getStudents() {
         return students;
     }
-    
-    public void setCourses(List<Course> courses) {
-        this.courses = courses;
-    }
-
+  
     public List<Course> getCourses() {
         return courses;
     }
     
+    public void addCourse(Course course) {
+        courses.add(course);
+    }
+    
+    public void removeCourse(Course course) {
+        courses.remove(course);
+    }
+    
     public void addStudent(Student student) {
         students.add(student);
+        student.addModule(this);
     }
     
     public void removeStudent(Student student) {
         students.remove(student);
+        student.removeModule(this);
     }
 
     @Override

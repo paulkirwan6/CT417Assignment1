@@ -88,5 +88,4 @@ public class CourseTest {
         course.removeModule(module);
         assert(course.getModules().isEmpty());
     }
-    
 }

@@ -1,6 +1,7 @@
 package com.mycompany.assignment1;
 
 import java.util.List;
+import java.util.ArrayList;
 import org.joda.time.DateTime;
 import org.joda.time.Period;
 
@@ -12,7 +13,8 @@ public class Student {
     private final String name;
     private final DateTime dateOfBirth;
     private final String id;
-    private List<String> modules;
+    private final List<Module> modules = new ArrayList<>();
+    private Course course;
     
     public Student(String name, DateTime dateOfBirth, String id) {
         this.name = name;
@@ -31,13 +33,25 @@ public class Student {
     public String getId() {
         return id;
     }
-
-    public void setModules(List<String> modules) {
-        this.modules = modules;
+    
+    public List<Module> getModules() {
+        return modules;
     }
 
-    public List<String> getModules() {
-        return modules;
+    public Course getCourse() {
+        return course;
+    }
+
+    public void setCourse(Course course) {
+        this.course = course;
+    }
+    
+    public void addModule(Module module) {
+        modules.add(module);
+    }
+    
+    public void removeModule(Module module) {
+        modules.remove(module);
     }
     
     @Override

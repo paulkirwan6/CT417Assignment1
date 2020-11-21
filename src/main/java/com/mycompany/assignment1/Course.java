@@ -51,18 +51,22 @@ public class Course {
     
     public void addStudent(Student student) {
         students.add(student);
+        student.setCourse(this);
     }
     
     public void removeStudent(Student student) {
         students.remove(student);
+        student.setCourse(null);
     }
     
     public void addModule(Module module) {
         modules.add(module);
+        module.addCourse(this);
     }
     
     public void removeModule(Module module) {
         modules.remove(module);
+        module.removeCourse(this);
     }
 
     @Override

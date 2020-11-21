@@ -1,5 +1,6 @@
 package com.mycompany.assignment1;
 
+import java.util.List;
 import org.joda.time.DateTime;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.AfterAll;
@@ -59,5 +60,33 @@ public class StudentTest {
         String expResult = "paulkirwan22";
         String result = instance.createUsername(currentDate);
         assertEquals(expResult, result);
+    }
+    
+    /**
+     * Test of addModule method, of class Student.
+     */
+    @Test
+    public void testAddModule() {
+        System.out.println("addModule");
+        Module module = new Module("name", "id");
+        Student student = new Student("name", new DateTime(), "id");
+        
+        student.addModule(module);
+        List<Module> modules = student.getModules();
+        assert(modules.contains(module));
+    }
+
+    /**
+     * Test of removeModule method, of class Student.
+     */
+    @Test
+    public void testRemoveModule() {
+        System.out.println("removeModule");
+        Module module = new Module("name", "id");
+        Student student = new Student("name", new DateTime(), "id");
+        
+        student.addModule(module);
+        student.removeModule(module);
+        assert(student.getModules().isEmpty());
     }
 }

@@ -60,4 +60,32 @@ public class ModuleTest {
         module.removeStudent(student);
         assert(module.getStudents().isEmpty());
     }
+    
+    /**
+     * Test of addCourse method, of class Module.
+     */
+    @Test
+    public void testAddCourse() {
+        System.out.println("addCourse");
+        Module module = new Module("name", "id");
+        Course course = new Course("name", new DateTime(), new DateTime());
+        
+        module.addCourse(course);
+        List<Course> courses = module.getCourses();
+        assert(courses.contains(course));
+    }
+
+    /**
+     * Test of removeCourse method, of class Module.
+     */
+    @Test
+    public void testRemoveCourse() {
+        System.out.println("removeCourse");
+        Module module = new Module("name", "id");
+        Course course = new Course("name", new DateTime(), new DateTime());
+        
+        module.addCourse(course);
+        module.removeCourse(course);
+        assert(module.getCourses().isEmpty());
+    }
 }
