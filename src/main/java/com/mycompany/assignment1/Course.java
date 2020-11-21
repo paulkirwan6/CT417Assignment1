@@ -13,8 +13,8 @@ public class Course {
     private final String name;
     private final DateTime startDate;
     private final DateTime endDate;
-    private List<Module> modules = new ArrayList<Module>();
-    private List<Student> students = new ArrayList<Student>();
+    private List<Module> modules = new ArrayList<>();
+    private List<Student> students = new ArrayList<>();
 
     public Course(String name, DateTime startDate, DateTime endDate) {
         this.name = name;
@@ -63,5 +63,10 @@ public class Course {
     
     public void removeModule(Module module) {
         modules.remove(module);
+    }
+
+    @Override
+    public String toString() {
+        return "Course{" + "name=" + name + ", endDate=" + endDate + '}';
     }
 }

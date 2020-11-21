@@ -11,8 +11,8 @@ public class Module {
     
     private final String name;
     private final String Id;
-    private List<Student> students = new ArrayList<Student>();
-    private List<Course> courses = new ArrayList<Course>();
+    private List<Student> students = new ArrayList<>();
+    private List<Course> courses = new ArrayList<>();
 
     public Module(String name, String Id) {
         this.name = name;
@@ -49,5 +49,10 @@ public class Module {
     
     public void removeStudent(Student student) {
         students.remove(student);
+    }
+
+    @Override
+    public String toString() {
+        return "Module{" + "name=" + name + ", Id=" + Id + '}';
     }
 }

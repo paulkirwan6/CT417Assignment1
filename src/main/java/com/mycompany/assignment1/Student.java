@@ -13,7 +13,6 @@ public class Student {
     private final DateTime dateOfBirth;
     private final String id;
     private List<String> modules;
-    private String username;
     
     public Student(String name, DateTime dateOfBirth, String id) {
         this.name = name;
@@ -40,8 +39,10 @@ public class Student {
     public List<String> getModules() {
         return modules;
     }
-    public String getUsername() {
-        return username;
+    
+    @Override
+    public String toString() {
+        return "Student{" + "name=" + name + ", id=" + id + ", username=" + createUsername(DateTime.now()) + '}';
     }
     
     //calculate age based on current date and date of birth

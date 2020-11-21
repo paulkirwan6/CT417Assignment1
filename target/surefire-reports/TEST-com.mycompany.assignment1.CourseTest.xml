@@ -64,8 +64,8 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.mycompany.assignment1.CourseTest" name="com.mycompany.assignment1.CourseTest.testAddModule" time="0.1"/>
+  <testcase classname="com.mycompany.assignment1.CourseTest" name="com.mycompany.assignment1.CourseTest.testRemoveStudent" time="0.1"/>
   <testcase classname="com.mycompany.assignment1.CourseTest" name="com.mycompany.assignment1.CourseTest.testAddStudent" time="0"/>
-  <testcase classname="com.mycompany.assignment1.CourseTest" name="com.mycompany.assignment1.CourseTest.testRemoveStudent" time="0"/>
+  <testcase classname="com.mycompany.assignment1.CourseTest" name="com.mycompany.assignment1.CourseTest.testAddModule" time="0"/>
   <testcase classname="com.mycompany.assignment1.CourseTest" name="com.mycompany.assignment1.CourseTest.testRemoveModule" time="0"/>
 </testsuite>
