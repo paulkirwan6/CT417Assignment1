@@ -41,10 +41,6 @@ public class Course {
         return modules;
     }
 
-    public void setStudents(List<Student> students) {
-        this.students = students;
-    }
-    
     public List<Student> getStudents() {
         return students;
     }
